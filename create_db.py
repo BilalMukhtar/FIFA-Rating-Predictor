@@ -1,19 +1,14 @@
 import psycopg2
-import pandas as pd
 from sqlalchemy import create_engine
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from understat_scrap_funcs import *
-from db_tables import players, teams
+from db_tables import *
 
-driver = webdriver.Chrome("/Users/sheikhbman/Desktop/My Projects/fbdict/chromedriver")
-
-conn_string = 'postgresql://postgres:password@localhost/db'
+conn_string = 'postgresql://postgres:password@localhost/understat'
   
 db = create_engine(conn_string)
 conn = db.connect()
 conn1 = psycopg2.connect(
-    database="db",
+    database="understat",
   user='postgres', 
   password='password', 
   host='localhost', 
@@ -23,11 +18,12 @@ conn1 = psycopg2.connect(
 conn1.autocommit = True
 cursor = conn1.cursor()
 
-cursor.execute('drop table if exists players')
-cursor.execute('drop table if exists teams')
-
-cursor.execute(players)
-cursor.execute(teams)
+seasons = ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"]
+for i in seasons:
+  cursor.execute(f'drop table if exists players_{i}')
+  cursor.execute(f'drop table if exists teams_{i}')
+  cursor.execute(eval(f'players_{i}'))
+  cursor.execute(eval(f'teams_{i}'))
 
 conn1.commit()
 conn1.close()

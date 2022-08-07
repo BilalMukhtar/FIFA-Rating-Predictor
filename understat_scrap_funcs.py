@@ -1,6 +1,4 @@
 import pandas as pd
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 
 def get_team_list(league, season, driver):
     url = f"https://understat.com/league/{league}/{season}"
@@ -59,18 +57,24 @@ def get_team_players(team, season, driver):
         cur = pd.DataFrame(data=[cur_dict])
         playerdf = pd.concat([playerdf, cur])
 
-    playerdf.astype(int)
+    col_list.remove("Team")
+    col_list.remove("Player")
+    col_list.remove("Pos")
+
+    playerdf.replace('', 0, inplace=True)
+
+    playerdf[col_list] = playerdf[col_list].astype(float)
     
     return playerdf
 
 #######################################################
 
-def get_league_players(league, season):
-    teams = get_team_list(league, season)
+def get_league_players(league, season, driver):
+    teams = get_team_list(league, season, driver)
     team_num = 0
     
     for i in teams:
-        cur_team = get_team_players(teams[team_num], season)
+        cur_team = get_team_players(teams[team_num], season, driver)
         
         if(team_num == 0):
             df = cur_team
@@ -83,12 +87,12 @@ def get_league_players(league, season):
 
 #######################################################
 
-def get_all_players(season):
+def get_all_players(season, driver):
     leagues = ["EPL", "La_liga", "Bundesliga", "Serie_A", "Ligue_1"]
     league_num = 0
     
     for i in leagues:
-        cur_league = get_league_players(leagues[league_num], season)
+        cur_league = get_league_players(leagues[league_num], season, driver)
         
         if(league_num == 0):
             df = cur_league
@@ -101,12 +105,12 @@ def get_all_players(season):
 
 ########################################################
 
-def full_players():
+def full_players(driver):
     seasons = ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"]
     season_num = 0
     
     for i in seasons:
-        cur_season = get_all_players(seasons[season_num])
+        cur_season = get_all_players(seasons[season_num], driver)
         
         if(season_num == 0):
             df = cur_season
@@ -159,18 +163,18 @@ def get_team_stats(league, season, driver):
 
     col_list.remove("Team")
 
-    teamdf[col_list]= teamdf[col_list].astype(float)
+    teamdf[col_list] = teamdf[col_list].astype(float)
     
     return teamdf
 
 ########################################################
 
-def get_all_teams(season):
+def get_all_teams(season, driver):
     leagues = ["EPL", "La_liga", "Bundesliga", "Serie_A", "Ligue_1"]
     league_num = 0
     
     for i in leagues:
-        cur_league = get_team_stats(leagues[league_num], season)
+        cur_league = get_team_stats(leagues[league_num], season, driver)
         
         if(league_num == 0):
             df = cur_league
@@ -183,12 +187,12 @@ def get_all_teams(season):
 
 ########################################################
 
-def full_teams():
+def full_teams(driver):
     seasons = ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"]
     season_num = 0
     
     for i in seasons:
-        cur_season = get_all_teams(seasons[season_num])
+        cur_season = get_all_teams(seasons[season_num], driver)
         
         if(season_num == 0):
             df = cur_season
@@ -198,3 +202,5 @@ def full_teams():
         season_num += 1
     
     return df
+
+########################################################
