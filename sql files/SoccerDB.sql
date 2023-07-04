@@ -8,23 +8,24 @@ DROP TABLE IF EXISTS PLAYER_RATINGS;
 
 CREATE TABLE PLAYER
 (
-    player_id       INTEGER,
-    ustat_id        INTEGER,
-    name_futbin     varchar(50),
-    name_ustat      varchar(50),
-    dob             date,
-    country         varchar(30),
-    position        varchar(5),
+    player_id           INTEGER,
+    player_id_ustat     INTEGER,
+    player_name_futbin  varchar(50),
+    player_name_ustat   varchar(50),
+    dob                 date,
+    nation              varchar(30),
+    position            varchar(5),
     CONSTRAINT PK_PLAYER PRIMARY KEY (player_id)
 );
 
-CREATE TABLE TEAM
+CREATE TABLE CLUB
 (
-    team_id         INTEGER,
-    name_futbin     varchar(50),
-    name_ustat      varchar(50),
-    country         varchar(50),
-    CONSTRAINT PK_TEAM PRIMARY KEY (team_id)
+    club_id             INTEGER,
+    club_id_futbin      INTEGER,
+    club_name_futbin    varchar(50),
+    club_name_ustat     varchar(50),
+    nation              varchar(50),
+    CONSTRAINT PK_TEAM PRIMARY KEY (club_id)
 );
 
 CREATE TABLE COMPETITION
@@ -40,19 +41,21 @@ CREATE TABLE PLAYER_STATS
     player_id           INTEGER,
     season              INTEGER,
     comp_id             INTEGER,
-    team_id             INTEGER,
+    club_id             INTEGER,
     apps                INTEGER,
     minutes             INTEGER,
     goals               INTEGER,
     assists             INTEGER,
     xG                  DECIMAL,
     xA                  DECIMAL,
-    CONSTRAINT PK_PLAYER_STATS PRIMARY KEY (player_id, season, comp_id, team_id)
+    CONSTRAINT PK_PLAYER_STATS PRIMARY KEY (player_id, season, comp_id, club_id),
+    CONSTRAINT FK1_PLAYER_STATS FOREIGN KEY (player_id) REFERENCES PLAYER(player_id),
+    CONSTRAINT FK1_PLAYER_STATS FOREIGN KEY (club_id) REFERENCES CLUB(club_id)
 );
 
-CREATE TABLE TEAM_STATS
+CREATE TABLE CLUB_STATS
 (
-    team_id             INTEGER,
+    club_id             INTEGER,
     season              INTEGER,
     comp_id             INTEGER,
     wins                INTEGER,
@@ -64,7 +67,8 @@ CREATE TABLE TEAM_STATS
     xG                  INTEGER,
     xA                  INTEGER,
     xGA                 INTEGER,
-    CONSTRAINT PK_TEAM_STATS PRIMARY KEY (team_id, season, comp_id)
+    CONSTRAINT PK_TEAM_STATS PRIMARY KEY (club_id, season, comp_id),
+    CONSTRAINT FK1_PLAYER_STATS FOREIGN KEY (club_id) REFERENCES CLUB(club_id)
 );
 
 CREATE TABLE COMP_STATS
@@ -79,6 +83,7 @@ CREATE TABLE PLAYER_RATINGS
 (
     player_id           INTEGER,
     season              INTEGER,
+    card_id             INTEGER,
     rating              INTEGER,
     pac                 INTEGER,
     acceleration        INTEGER,
@@ -120,5 +125,6 @@ CREATE TABLE PLAYER_RATINGS
     gk_handling         INTEGER,
     gk_speed            INTEGER,
     gk_kicking          INTEGER,
-    CONSTRAINT PK_PLAYER_RATINGS PRIMARY KEY (player_id, season)
+    CONSTRAINT PK_PLAYER_RATINGS PRIMARY KEY (player_id, season),
+    CONSTRAINT FK1_PLAYER_STATS FOREIGN KEY (player_id) REFERENCES PLAYER(player_id)
 );

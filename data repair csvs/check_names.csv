@@ -1,33 +1,33 @@
 id,futbin_name,ustat_name,score
-104389,Rune Almenning Jarstein,Kevin-Prince Boateng,55.81395348837209
-169697,Darren Randolph,Dan Ndoye,58.333333333333336
-230043,Faitout Maouassa,Moussa Doumbia,60.0
-230727,Gautier Larsonneur,Serge Aurier,60.0
-204529,Michy Batshuayi,Joshua Kimmich,62.06896551724138
-184484,Gylfi Sigurðsson,Arnór Sigurdsson,62.5
-163264,Tom Heaton,Thomas Henry,63.63636363636363
-203775,Loris Karius,Karim Onisiwo,64.0
-180206,Miralem Pjanic,Milos Pantovic,64.28571428571428
-226078,Mahmoud Hassan,Mahmoud Dahoud,66.66666666666666
-234102,Ionuț Andrei Radu,Andrei Motoc,66.66666666666666
-211101,Rubén Blanco Veiga,Rubén Peña,66.66666666666666
-199561,Manuel Agudo Durán,Manuel Neuer,66.66666666666666
-242816,Ricard Puig Martí,Omar Richards,66.66666666666666
+104389,Rune Almenning Jarstein,Rune Jarstein,55.81395348837209
+169697,Darren Randolph,Darren Randolph,58.333333333333336
+230043,Faitout Maouassa,Faitout Maouassa,60.0
+230727,Gautier Larsonneur,Gautier Larsonneur,60.0
+204529,Michy Batshuayi,Michy Batshuayi,62.06896551724138
+184484,Gylfi Sigurðsson,Gylfi Sigurdsson,62.5
+163264,Tom Heaton,Tom Heaton,63.63636363636363
+203775,Loris Karius,Loris Karius,64.0
+180206,Miralem Pjanic,Miralem Pjanic,64.28571428571428
+226078,Mahmoud Hassan,Trézéguet,66.66666666666666
+234102,Ionuț Andrei Radu,Ionut Radu,66.66666666666666
+211101,Rubén Blanco Veiga,Rubén Blanco,66.66666666666666
+199561,Manuel Agudo Durán,Nolito,66.66666666666666
+242816,Ricard Puig Martí,Riqui Puig,66.66666666666666
 191076,Guðmundsson,Albert Gudmundsson,68.9655172413793
 233631,Amath Ndiaye,Amath Diedhiou,69.23076923076923
-233267,Matt Turner,Matt Targett,69.56521739130434
-236817,Habib Maïga,Habib Diarra,69.56521739130434
-205966,Amin Younes,Tyrone Mings,69.56521739130434
+233267,Matt Turner,Matt Turner,69.56521739130434
+236817,Habib Maïga,Digbo Maiga,69.56521739130434
+205966,Amin Younes,Amin Younes,69.56521739130434
 244253,Uroš Račić,Uros Racic,70.0
 234772,Salvador Sánchez Ponce,Salvi Sánchez,70.0
 188103,Rochina Naixes,Rubén Rochina,70.0
-199715,Víctor Machín Pérez,Víctor Díaz,70.58823529411765
-201400,Rafael Alcântara,Rafael Leão,70.58823529411765
+199715,Víctor Machín Pérez,Víctor Ruiz,70.58823529411765
+201400,Rafael Alcântara,Rafinha,70.58823529411765
 242348,Lorenzo Morón García,Loren Morón,70.96774193548387
-189485,Diego Farías da Silva,Rui Silva,71.42857142857143
-228819,Matías Vargas,Matías Arezo,72.0
-187936,Steven Nzonzi,Steve Mounie,72.0
-177604,Ignacio Monreal Eraso,Ignacio Ramírez,72.22222222222223
+189485,Diego Farías da Silva,Diego Farias,71.42857142857143
+228819,Matías Vargas,Matías Vargas,72.0
+187936,Steven Nzonzi,Steven N'Zonzi,72.0
+177604,Ignacio Monreal Eraso,Nacho Monreal,72.22222222222223
 212623,Santiago Mina Lorenzo,Santiago Arias,72.72727272727272
 189860,Francisco Femenía Far,Kiko Femenía,73.6842105263158
 241686,Manuel Vallejo Galván,Manu Vallejo,73.6842105263158
@@ -68,7 +68,7 @@ id,futbin_name,ustat_name,score
 206304,Luka Milivojević,Luka Milivojevic,93.75
 252000,Domagoj Bradarić,Domagoj Bradaric,93.75
 240240,Jean-Pierre Nsame,Jean-Pierre Nsamé,94.11764705882354
-199254,João Pedro,João Pedro,100.0
+199254,João Pedro,Pedro,100.0
 183427,Fabian Delph,Fabian Delph,100.0
 176266,Lucas Pezzini Leiva,Lucas Leiva,100.0
 182493,Diego Godín,Diego Godín,100.0
@@ -127,7 +127,7 @@ id,futbin_name,ustat_name,score
 222148,Ondrej Duda,Ondrej Duda,100.0
 216452,Gonçalo Paciência,Gonçalo Paciência,100.0
 216380,Daley Sinkgraven,Daley Sinkgraven,100.0
-215449,Robert Skov,Robert,100.0
+215449,Robert Skov,Robert Skov,100.0
 211899,Florian Niederlechner,Florian Niederlechner,100.0
 211862,André Hahn,André Hahn,100.0
 204472,Bouna Sarr,Bouna Sarr,100.0
@@ -152,7 +152,7 @@ id,futbin_name,ustat_name,score
 192665,Andreas Luthe,Andreas Luthe,100.0
 200316,Timo Horn,Timo Horn,100.0
 228336,Florian Grillitsch,Florian Grillitsch,100.0
-202935,Álvaro,Álvaro González,100.0
+202935,Álvaro,Álvaro Vadillo,100.0
 193348,Xherdan Shaqiri,Xherdan Shaqiri,100.0
 165229,Laurent Koscielny,Laurent Koscielny,100.0
 225951,Denis Bouanga,Denis Bouanga,100.0
@@ -176,7 +176,7 @@ id,futbin_name,ustat_name,score
 176772,Alexandre Oukidja,Alexandre Oukidja,100.0
 195096,Fransérgio,Fransérgio,100.0
 216643,Léo Dubois,Léo Dubois,100.0
-180334,Marcelo,Marcelo,100.0
+180334,Marcelo,Marcelo Saracchi,100.0
 179789,Damien Da Silva,Damien Da Silva,100.0
 236477,Alexis Claude-Maurice,Alexis Claude Maurice,100.0
 210438,Farid Boulaya,Farid Boulaya,100.0
@@ -186,7 +186,7 @@ id,futbin_name,ustat_name,score
 162895,Cesc Fàbregas,Cesc Fàbregas,100.0
 184190,Romain Thomas,Romain Thomas,100.0
 193683,Xavier Chavalerin,Xavier Chavalerin,100.0
-200677,Pedro Mendes,Pedro Mendes,100.0
+200677,Pedro Mendes,Pedro,100.0
 236639,Xeka,Xeka,100.0
 213629,Erick Pulgar,Erick Pulgar,100.0
 199823,José Gómez Campaña,José Campaña,100.0
@@ -245,7 +245,7 @@ id,futbin_name,ustat_name,score
 199633,Matthew Lowton,Matthew Lowton,100.0
 190875,Juraj Kucka,Juraj Kucka,100.0
 194932,Andros Townsend,Andros Townsend,100.0
-212491,Arthur Masuaku,Arthur,100.0
+212491,Arthur Masuaku,Arthur Masuaku,100.0
 214947,Jean-Philippe Gbamin,Jean-Philippe Gbamin,100.0
 229167,Milot Rashica,Milot Rashica,100.0
 220421,Hassane Kamara,Hassane Kamara,100.0
@@ -258,18 +258,18 @@ id,futbin_name,ustat_name,score
 194794,Andriy Yarmolenko,Andriy Yarmolenko,100.0
 198719,Nathan Redmond,Nathan Redmond,100.0
 164859,Theo Walcott,Theo Walcott,100.0
-192667,Allan-Roméo Nyom,Allan,100.0
+192667,Allan-Roméo Nyom,Nyom,100.0
 146947,Mikel Vesga Arruti,Mikel Vesga,100.0
 221639,Mariano Díaz Mejía,Mariano,100.0
-177633,Ángel,José Ángel,100.0
+177633,Ángel,Ángel Correa,100.0
 204259,Santiago Arias,Santiago Arias,100.0
 237239,Enis Bardhi,Enis Bardhi,100.0
 200315,Cristian Tello Herrera,Cristian Tello,100.0
-198230,Germán,Germán Sánchez,100.0
+198230,Germán,Germán Pezzella,100.0
 192789,Mario Gaspar,Mario,100.0
 189805,Luuk de Jong,Luuk de Jong,100.0
 189560,Iborra,Vicente Iborra,100.0
-186682,Ángel Montoro Sánchez,Ángel,100.0
+186682,Ángel Montoro Sánchez,Montoro,100.0
 197853,Serge Aurier,Serge Aurier,100.0
 172522,Daniel Wass,Daniel Wass,100.0
 201922,Martin Hinteregger,Martin Hinteregger,100.0
