@@ -1,0 +1,22 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(DBI)
+# Connect to a specific postgres database i.e. Heroku
+con <- dbConnect(RPostgres::Postgres(),
+                 dbname = 'postgres', 
+                 host = 'localhost',
+                 port = 5432,
+                 user = 'postgres',
+                 password = 'password')
+```
+```{r}
+res <- dbSendQuery(con, "SELECT * FROM PLAYER p JOIN PLAYER_STATS ps ON p.player_id = ps.player_id 
+                          JOIN PLAYER_RATINGS pr ON p.player_id = pr.player_id
+                          WHERE ps.season = 22 and pr.season = 23")
+dbFetch(res)
+dbClearResult(res)
+```

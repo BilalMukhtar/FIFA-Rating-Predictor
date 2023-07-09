@@ -1,10 +1,10 @@
-DROP TABLE IF EXISTS PLAYER;
-DROP TABLE IF EXISTS TEAM;
-DROP TABLE IF EXISTS COMPETITION;
-DROP TABLE IF EXISTS PLAYER_STATS;
-DROP TABLE IF EXISTS TEAM_STATS;
-DROP TABLE IF EXISTS COMP_STATS;
-DROP TABLE IF EXISTS PLAYER_RATINGS;
+DROP TABLE IF EXISTS PLAYER CASCADE;
+DROP TABLE IF EXISTS CLUB CASCADE;
+DROP TABLE IF EXISTS COMPETITION CASCADE;
+DROP TABLE IF EXISTS PLAYER_STATS CASCADE;
+DROP TABLE IF EXISTS CLUB_STATS CASCADE;
+DROP TABLE IF EXISTS COMP_STATS CASCADE;
+DROP TABLE IF EXISTS PLAYER_RATINGS CASCADE;
 
 CREATE TABLE PLAYER
 (
@@ -22,8 +22,8 @@ CREATE TABLE CLUB
 (
     club_id             INTEGER,
     club_id_futbin      INTEGER,
-    club_name_futbin    varchar(50),
-    club_name_ustat     varchar(50),
+    club_name_futbin    varchar(100),
+    club_name_ustat     varchar(100),
     nation              varchar(50),
     CONSTRAINT PK_TEAM PRIMARY KEY (club_id)
 );
@@ -46,11 +46,11 @@ CREATE TABLE PLAYER_STATS
     minutes             INTEGER,
     goals               INTEGER,
     assists             INTEGER,
-    xG                  DECIMAL,
-    xA                  DECIMAL,
+    "xG"                  DECIMAL,
+    "xA"                  DECIMAL,
     CONSTRAINT PK_PLAYER_STATS PRIMARY KEY (player_id, season, comp_id, club_id),
     CONSTRAINT FK1_PLAYER_STATS FOREIGN KEY (player_id) REFERENCES PLAYER(player_id),
-    CONSTRAINT FK1_PLAYER_STATS FOREIGN KEY (club_id) REFERENCES CLUB(club_id)
+    CONSTRAINT FK2_PLAYER_STATS FOREIGN KEY (club_id) REFERENCES CLUB(club_id)
 );
 
 CREATE TABLE CLUB_STATS
@@ -111,8 +111,8 @@ CREATE TABLE PLAYER_RATINGS
     curve               INTEGER,
     def                 INTEGER,
     interceptions       INTEGER,
-    heading             INTEGER,
-    marking             INTEGER,
+    heading_acc         INTEGER,
+    def_awareness       INTEGER,
     standing_tackle     INTEGER,
     sliding_tackle      INTEGER,
     phy                 INTEGER,
@@ -121,10 +121,11 @@ CREATE TABLE PLAYER_RATINGS
     strength            INTEGER,
     aggression          INTEGER,
     gk_diving           INTEGER,
-    gk_reflexes         INTEGER,
     gk_handling         INTEGER,
-    gk_speed            INTEGER,
     gk_kicking          INTEGER,
+    gk_reflexes         INTEGER,
+    gk_speed            INTEGER,
+    gk_positioning      INTEGER,
     CONSTRAINT PK_PLAYER_RATINGS PRIMARY KEY (player_id, season),
     CONSTRAINT FK1_PLAYER_STATS FOREIGN KEY (player_id) REFERENCES PLAYER(player_id)
 );
