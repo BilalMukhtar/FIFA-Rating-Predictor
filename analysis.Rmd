@@ -14,9 +14,12 @@ con <- dbConnect(RPostgres::Postgres(),
 ```
 
 ```{r}
-res <- dbSendQuery(con, "SELECT * FROM PLAYER p JOIN PLAYER_STATS ps ON p.player_id = ps.player_id 
-                          JOIN PLAYER_RATINGS pr ON p.player_id = pr.player_id
-                          WHERE (ps.season = 22 and pr.season = 23) or (ps.season = 21 and pr.season = 22)")
+res <- dbSendQuery(con, ("SELECT p.*, ps.*, curr.rating, prevr.*
+FROM PLAYER p
+JOIN PLAYER_STATS ps ON p.player_id = ps.player_id
+JOIN PLAYER_RATINGS prevr ON p.player_id = prevr.player_id
+JOIN PLAYER_RATINGS curr ON p.player_id = curr.player_id
+WHERE ps.season = prevr.season AND ps.season = curr.season-1;"))
 tab = dbFetch(res)
 dbClearResult(res)
 ```
@@ -27,6 +30,8 @@ tab
 
 
 ```{r}
+library(tidyverse)
+library(glmnet)
 data<- tab #%>%
   #select(player_name_futbin,rating,comp_id,apps,minutes,goals,xG,assists,xA,shots,key_passes,yellow_cards,red_cards,npg,npxG,xGChain,xGBuildup)
 
