@@ -5,7 +5,6 @@ output: html_notebook
 
 ```{r}
 library(DBI)
-# Connect to a specific postgres database i.e. Heroku
 con <- dbConnect(RPostgres::Postgres(),
                  dbname = 'postgres', 
                  host = 'localhost',
@@ -14,15 +13,61 @@ con <- dbConnect(RPostgres::Postgres(),
                  password = 'password')
 ```
 
-
-
-
-
-
 ```{r}
 res <- dbSendQuery(con, "SELECT * FROM PLAYER p JOIN PLAYER_STATS ps ON p.player_id = ps.player_id 
                           JOIN PLAYER_RATINGS pr ON p.player_id = pr.player_id
-                          WHERE ps.season = 22 and pr.season = 23")
-dbFetch(res)
+                          WHERE (ps.season = 22 and pr.season = 23) or (ps.season = 21 and pr.season = 22)")
+tab = dbFetch(res)
 dbClearResult(res)
+```
+
+```{r}
+tab
+```
+
+
+```{r}
+data<- tab #%>%
+  #select(player_name_futbin,rating,comp_id,apps,minutes,goals,xG,assists,xA,shots,key_passes,yellow_cards,red_cards,npg,npxG,xGChain,xGBuildup)
+
+set.seed(100)
+data[is.na(data)] <- 0
+train <- data %>% sample_frac(size = 0.8, fac=rating)
+test <- data %>% setdiff(train)
+```
+
+```{r}
+train
+```
+
+```{r}
+library(rpart)
+library(rpart.plot)
+form<- as.formula(rating~.)
+
+mod_tree <- rpart(form,data=train)
+```
+
+```{r}
+library(randomForest)
+mod_rf<- randomForest(form,train,ntree=1000,importance=TRUE)
+mod_rf
+```
+
+```{r}
+# Get variable importance from the model fit
+ImpData <- as.data.frame(importance(mod_rf))
+ImpData$Var.Names <- row.names(ImpData)
+
+ggplot(ImpData, aes(x=Var.Names, y=`%IncMSE`)) +
+  geom_segment( aes(x=Var.Names, xend=Var.Names, y=0, yend=`%IncMSE`), color="skyblue") +
+  geom_point(aes(size = IncNodePurity), color="blue", alpha=0.6) +
+  theme_light() +
+  coord_flip() +
+  theme(
+    legend.position="bottom",
+    panel.grid.major.y = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.y = element_blank()
+  )
 ```
