@@ -23,7 +23,7 @@ In preparation for the the release of EAFC 24, I wanted to attempt to predict th
 
 ## Database
 Based on the following diagram, the goal is to expand the project to also contain data from teams which may improve the current predictions along with allowing for future projects/analysis
-
+![alt text]([http://url/to/img.png](https://drawsql.app/teams/bilals-team-1/diagrams/soccerdb/embed))
 
 
 ## Data Sources
