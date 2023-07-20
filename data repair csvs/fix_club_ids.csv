@@ -1,131 +1,228 @@
 fb_team,futbin_id,us_team,db_id
-Toulouse FC,1809.0,Toulouse,1.0
-1. FC Köln,31.0,FC Cologne,2.0
-1. FSV Mainz 05,169.0,Mainz 05,3.0
-AC Ajaccio,614.0,Ajaccio,4.0
-AC Monza,111811.0,Monza,5.0
-AFC Bournemouth,1943.0,Bournemouth,6.0
-AJ Auxerre,57.0,Auxerre,7.0
-Angers SCO,1530.0,Angers,8.0
-Arsenal,1.0,Arsenal,9.0
-AS Monaco,69.0,Monaco,10.0
-Aston Villa,2.0,Aston Villa,11.0
-Atalanta BC,115845.0,Atalanta,12.0
-Athletic Club,448.0,Athletic Club,13.0
-Atlético de Madrid,240.0,Atletico Madrid,14.0
-Bologna,189.0,Bologna,15.0
-Brentford,1925.0,Brentford,16.0
-Brighton,1808.0,Brighton,17.0
-Cádiz CF,1968.0,Cadiz,18.0
-CA Osasuna,479.0,Osasuna,19.0
-Chelsea,5.0,Chelsea,20.0
-Clermont,1815.0,Clermont Foot,21.0
-Cremonese,111434.0,Cremonese,22.0
-Crystal Palace,1799.0,Crystal Palace,23.0
-Dortmund,22.0,Borussia Dortmund,24.0
-Elche CF,468.0,Elche,25.0
-Empoli,1746.0,Empoli,26.0
-Everton,7.0,Everton,27.0
-FC Augsburg,100409.0,Augsburg,28.0
-FC Barcelona,241.0,Barcelona,29.0
-FC Bayern,21.0,Bayern Munich,30.0
-FC Lorient,217.0,Lorient,31.0
-FC Nantes,71.0,Nantes,32.0
-FC Schalke 04,34.0,Schalke 04,33.0
-Fiorentina,110374.0,Fiorentina,34.0
-Frankfurt,1824.0,Eintracht Frankfurt,35.0
-Fulham,144.0,Fulham,36.0
-Getafe CF,1860.0,Getafe,37.0
-Girona FC,110062.0,Girona,38.0
-Hellas Verona,206.0,Verona,39.0
-Hertha Berlin,166.0,Hertha Berlin,40.0
-Inter,44.0,Inter,41.0
-Juventus,45.0,Juventus,42.0
-La Spezia,113974.0,Spezia,43.0
-Lecce,347.0,Lecce,44.0
-Leeds United,8.0,Leeds,45.0
-Leicester City,95.0,Leicester,46.0
-Leverkusen,32.0,Bayer Leverkusen,47.0
-Liverpool,9.0,Liverpool,48.0
-LOSC,65.0,Lille,49.0
-M'gladbach,23.0,Borussia M.Gladbach,50.0
-Manchester City,10.0,Manchester City,51.0
-Manchester Utd,11.0,Manchester United,52.0
-Milan,47.0,AC Milan,53.0
-Montpellier,70.0,Montpellier,54.0
-Napoli,116365.0,Napoli,55.0
-Newcastle Utd,13.0,Newcastle United,56.0
-Nott'm Forest,14.0,Nottingham Forest,57.0
-OGC Nice,72.0,Nice,58.0
-OL,66.0,Lyon,59.0
-OM,219.0,Marseille,60.0
-Paris SG,73.0,Paris Saint Germain,61.0
-R. Valladolid CF,462.0,Real Valladolid,62.0
-Rayo Vallecano,480.0,Rayo Vallecano,63.0
-RB Leipzig,112172.0,RasenBallsport Leipzig,64.0
-RC Celta,450.0,Celta Vigo,65.0
-RC Lens,64.0,Lens,66.0
-RCD Espanyol,452.0,Espanyol,67.0
-RCD Mallorca,453.0,Mallorca,68.0
-Real Betis,449.0,Real Betis,69.0
-Real Madrid,243.0,Real Madrid,70.0
-Real Sociedad,457.0,Real Sociedad,71.0
-Rennes,74.0,Rennes,72.0
-Roma FC,114912.0,Roma,73.0
-Salernitana,110373.0,Salernitana,74.0
-Sampdoria,1837.0,Sampdoria,75.0
-Sassuolo,111974.0,Sassuolo,76.0
-SC Freiburg,25.0,Freiburg,77.0
-Sevilla FC,481.0,Sevilla,78.0
-Southampton,17.0,Southampton,79.0
-Spurs,18.0,Tottenham,80.0
-SS Lazio,115841.0,Lazio,81.0
-Stade Brestois 29,378.0,Brest,82.0
-Stade de Reims,379.0,Reims,83.0
-Strasbourg,76.0,Strasbourg,84.0
-Torino,54.0,Torino,85.0
-Troyes,294.0,Troyes,86.0
-TSG Hoffenheim,10029.0,Hoffenheim,87.0
-UD Almería,1861.0,Almeria,88.0
-Udinese,55.0,Udinese,89.0
-Union Berlin,1831.0,Union Berlin,90.0
-Valencia CF,461.0,Valencia,91.0
-VfB Stuttgart,36.0,VfB Stuttgart,92.0
-VfL Bochum,160.0,Bochum,93.0
-VfL Wolfsburg,175.0,Wolfsburg,94.0
-Villarreal CF,483.0,Villarreal,95.0
-Werder Bremen,38.0,Werder Bremen,96.0
-West Ham,19.0,West Ham,97.0
-Wolves,110.0,Wolverhampton Wanderers,98.0
-Norwich,1792.0,Norwich,99.0
-Watford,1795.0,Watford,100.0
-Burnley,1796.0,Burnley,101.0
-D. Alavés,463.0,Alaves,102.0
-Granada CF,110832.0,Granada,103.0
-Levante UD,1853.0,Levante,104.0
-Genoa,110556.0,Genoa,105.0
-Cagliari,1842.0,Cagliari,106.0
-Napoli,48.0,Napoli,55.0
-Venezia,205.0,Venezia,107.0
-Piemonte Calcio,114153.0,Juventus,42.0
-FC Metz,68.0,Metz,108.0
-ASSE,1819.0,Saint-Etienne,109.0
-Bordeaux,59.0,Bordeaux,110.0
-Bielefeld,159.0,Arminia Bielefeld,111.0
-Greuther Fürth,165.0,Greuther Fuerth,112.0
-Sheffield Utd,1794.0,Sheffield United,113.0
-West Brom,109.0,West Bromwich Albion,114.0
-SD Eibar,467.0,Eibar,115.0
-SD Huesca,110839.0,Huesca,116.0
-Parma,50.0,Parma Calcio 1913,117.0
-Benevento,112026.0,Benevento,118.0
-Lazio,46.0,Lazio,81.0
-Atalanta,39.0,None,12.0
-Dijon FCO,110569.0,Dijon,119.0
-Nîmes Olympique,224.0,Nimes,120.0
-CD Leganés,100888.0,Leganes,121.0
-Roma,52.0,Roma,73.0
-Brescia,190.0,Brescia,122.0
-SPAL,112791.0,SPAL 2013,123.0
-Amiens SC,1816.0,Amiens,124.0
-Fortuna Düsseldorf,110636.0,Fortuna Duesseldorf,125.0
+Toulouse FC,1809,Toulouse,1
+1. FC Köln,31,FC Cologne,2
+1. FSV Mainz 05,169,Mainz 05,3
+AC Ajaccio,614,Ajaccio,4
+AC Monza,111811,Monza,5
+AFC Bournemouth,1943,Bournemouth,6
+AJ Auxerre,57,Auxerre,7
+Angers SCO,1530,Angers,8
+Arsenal,1,Arsenal,9
+AS Monaco,69,Monaco,10
+Aston Villa,2,Aston Villa,11
+Atalanta BC,115845,Atalanta,12
+Athletic Club,448,Athletic Club,13
+Atlético de Madrid,240,Atletico Madrid,14
+Bologna,189,Bologna,15
+Brentford,1925,Brentford,16
+Brighton,1808,Brighton,17
+Cádiz CF,1968,Cadiz,18
+CA Osasuna,479,Osasuna,19
+Chelsea,5,Chelsea,20
+Clermont,1815,Clermont Foot,21
+Cremonese,111434,Cremonese,22
+Crystal Palace,1799,Crystal Palace,23
+Dortmund,22,Borussia Dortmund,24
+Elche CF,468,Elche,25
+Empoli,1746,Empoli,26
+Everton,7,Everton,27
+FC Augsburg,100409,Augsburg,28
+FC Barcelona,241,Barcelona,29
+FC Bayern,21,Bayern Munich,30
+FC Lorient,217,Lorient,31
+FC Nantes,71,Nantes,32
+FC Schalke 04,34,Schalke 04,33
+Fiorentina,110374,Fiorentina,34
+Frankfurt,1824,Eintracht Frankfurt,35
+Fulham,144,Fulham,36
+Getafe CF,1860,Getafe,37
+Girona FC,110062,Girona,38
+Hellas Verona,206,Verona,39
+Hertha Berlin,166,Hertha Berlin,40
+Inter,44,Inter,41
+Juventus,45,Juventus,42
+La Spezia,113974,Spezia,43
+Lecce,347,Lecce,44
+Leeds United,8,Leeds,45
+Leicester City,95,Leicester,46
+Leverkusen,32,Bayer Leverkusen,47
+Liverpool,9,Liverpool,48
+LOSC,65,Lille,49
+M'gladbach,23,Borussia M.Gladbach,50
+Manchester City,10,Manchester City,51
+Manchester Utd,11,Manchester United,52
+Milan,47,AC Milan,53
+Montpellier,70,Montpellier,54
+Napoli,116365,Napoli,55
+Newcastle Utd,13,Newcastle United,56
+Nott'm Forest,14,Nottingham Forest,57
+OGC Nice,72,Nice,58
+OL,66,Lyon,59
+OM,219,Marseille,60
+Paris SG,73,Paris Saint Germain,61
+R. Valladolid CF,462,Real Valladolid,62
+Rayo Vallecano,480,Rayo Vallecano,63
+RB Leipzig,112172,RasenBallsport Leipzig,64
+RC Celta,450,Celta Vigo,65
+RC Lens,64,Lens,66
+RCD Espanyol,452,Espanyol,67
+RCD Mallorca,453,Mallorca,68
+Real Betis,449,Real Betis,69
+Real Madrid,243,Real Madrid,70
+Real Sociedad,457,Real Sociedad,71
+Rennes,74,Rennes,72
+Roma FC,114912,Roma,73
+Salernitana,110373,Salernitana,74
+Sampdoria,1837,Sampdoria,75
+Sassuolo,111974,Sassuolo,76
+SC Freiburg,25,Freiburg,77
+Sevilla FC,481,Sevilla,78
+Southampton,17,Southampton,79
+Spurs,18,Tottenham,80
+SS Lazio,115841,Lazio,81
+Stade Brestois 29,378,Brest,82
+Stade de Reims,379,Reims,83
+Strasbourg,76,Strasbourg,84
+Torino,54,Torino,85
+Troyes,294,Troyes,86
+TSG Hoffenheim,10029,Hoffenheim,87
+UD Almería,1861,Almeria,88
+Udinese,55,Udinese,89
+Union Berlin,1831,Union Berlin,90
+Valencia CF,461,Valencia,91
+VfB Stuttgart,36,VfB Stuttgart,92
+VfL Bochum,160,Bochum,93
+VfL Wolfsburg,175,Wolfsburg,94
+Villarreal CF,483,Villarreal,95
+Werder Bremen,38,Werder Bremen,96
+West Ham,19,West Ham,97
+Wolves,110,Wolverhampton Wanderers,98
+Norwich,1792,Norwich,99
+Watford,1795,Watford,100
+Burnley,1796,Burnley,101
+D. Alavés,463,Alaves,102
+Granada CF,110832,Granada,103
+Levante UD,1853,Levante,104
+Genoa,110556,Genoa,105
+Cagliari,1842,Cagliari,106
+Napoli,48,Napoli,55
+Venezia,205,Venezia,107
+Piemonte Calcio,114153,Juventus,42
+FC Metz,68,Metz,108
+ASSE,1819,Saint-Etienne,109
+Bordeaux,59,Bordeaux,110
+Bielefeld,159,Arminia Bielefeld,111
+Greuther Fürth,165,Greuther Fuerth,112
+Sheffield Utd,1794,Sheffield United,113
+West Brom,109,West Bromwich Albion,114
+SD Eibar,467,Eibar,115
+SD Huesca,110839,Huesca,116
+Parma,50,Parma Calcio 1913,117
+Benevento,112026,Benevento,118
+Lazio,46,Lazio,81
+Atalanta,39,None,12
+Dijon FCO,110569,Dijon,119
+Nîmes Olympique,224,Nimes,120
+CD Leganés,100888,Leganes,121
+Roma,52,Roma,73
+Brescia,190,Brescia,122
+SPAL,112791,SPAL 2013,123
+Amiens SC,1816,Amiens,124
+Fortuna Düsseldorf,110636,Fortuna Duesseldorf,125
+Southampton,17,Southampton,79
+Aston Villa,2,Aston Villa,11
+Everton,7,Everton,27
+Manchester City,10,Manchester City,51
+Watford,1795,Watford,100
+Manchester United,11,Manchester United,52
+Liverpool,9,Liverpool,48
+Brighton & Hove Albion,1808,Brighton,17
+Chelsea,5,Chelsea,20
+Sheffield United,1794,Sheffield United,113
+Newcastle United,13,Newcastle United,56
+West Ham United,19,West Ham,97
+Norwich City,1792,Norwich,99
+Leicester City,95,Leicester,46
+Arsenal,1,Arsenal,9
+Tottenham Hotspur,18,Tottenham,80
+Burnley,1796,Burnley,101
+Bournemouth,1943,Bournemouth,6
+Crystal Palace,1799,Crystal Palace,23
+Wolverhampton Wanderers,110,Wolverhampton Wanderers,98
+Granada CF,110832,Granada,103
+R. Valladolid CF,462,Real Valladolid,62
+Sevilla FC,481,Sevilla,78
+FC Barcelona,241,Barcelona,29
+CD Leganés,100888,Leganes,121
+Getafe CF,1860,Getafe,37
+Real Betis,449,Real Betis,69
+SD Eibar,467,Eibar,115
+D. Alavés,463,Alaves,102
+Valencia CF,461,Valencia,91
+CA Osasuna,479,Osasuna,19
+RC Celta,450,Celta Vigo,65
+Levante UD,1853,Levante,104
+Real Sociedad,457,Real Sociedad,71
+RCD Espanyol,452,Espanyol,67
+RCD Mallorca,453,Mallorca,68
+Villarreal CF,483,Villarreal,95
+Real Madrid,243,Real Madrid,70
+Athletic Club,448,Athletic Club,13
+Atlético Madrid,240,Atletico Madrid,14
+Bologna,189,Bologna,15
+Lazio,46,Lazio,81
+Roma,52,Roma,73
+Napoli,48,Napoli,55
+Hellas Verona,206,Verona,39
+Parma,50,Parma Calcio 1913,117
+Fiorentina,110374,Fiorentina,34
+Cagliari,1842,Cagliari,106
+Atalanta,39,Atalanta,12
+Genoa,110556,Genoa,105
+Lecce,347,Lecce,44
+Brescia,190,Brescia,122
+Piemonte Calcio,114153,Juventus,42
+Sampdoria,1837,Sampdoria,75
+Milan,47,AC Milan,53
+Udinese,55,Udinese,89
+Torino,54,Torino,85
+Inter,44,Inter,41
+Sassuolo,111974,Sassuolo,76
+SPAL,112791,SPAL 2013,123
+Paris Saint-Germain,73,Paris Saint Germain,61
+Olympique de Marseille,219,Marseille,60
+AS Monaco Football Club SA,69,Monaco,10
+Amiens SC,1816,Amiens,124
+Stade Brestois 29,378,Brest,82
+LOSC Lille,65,Lille,49
+RC Strasbourg Alsace,76,Strasbourg,84
+FC Girondins de Bordeaux,59,Bordeaux,110
+Football Club de Metz,68,Metz,108
+FC Nantes,71,Nantes,32
+Angers SCO,1530,Angers,8
+Toulouse Football Club,1809,Toulouse,1
+Dijon FCO,110569,Dijon,119
+Stade de Reims,379,Reims,83
+Montpellier Hérault SC,70,Montpellier,54
+Stade Rennais FC,74,Rennes,72
+AS Saint-Étienne,1819,Saint-Etienne,109
+Olympique Lyonnais,66,Lyon,59
+OGC Nice,72,Nice,58
+Nîmes Olympique,224,Nimes,120
+FC Augsburg,100409,Augsburg,28
+1. FC Köln,31,FC Cologne,2
+SV Werder Bremen,38,Werder Bremen,96
+TSG 1899 Hoffenheim,10029,Hoffenheim,87
+FC Bayern München,21,Bayern Munich,30
+Borussia Dortmund,22,Borussia Dortmund,24
+Borussia Mönchengladbach,23,Borussia M.Gladbach,50
+Eintracht Frankfurt,1824,Eintracht Frankfurt,35
+FC Schalke 04,34,Schalke 04,33
+1. FSV Mainz 05,169,Mainz 05,3
+Hertha BSC,166,Hertha Berlin,40
+RB Leipzig,112172,RasenBallsport Leipzig,64
+Sport-Club Freiburg,25,Freiburg,77
+1. FC Union Berlin,1831,Union Berlin,90
+Bayer 04 Leverkusen,32,Bayer Leverkusen,47
+Fortuna Düsseldorf,110636,Fortuna Duesseldorf,125
+VfL Wolfsburg,175,Wolfsburg,94

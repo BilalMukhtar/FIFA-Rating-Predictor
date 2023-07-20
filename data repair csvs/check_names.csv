@@ -1,9 +1,9 @@
 id,futbin_name,ustat_name,score
 200641,Yevhen Konoplyanka,Yevhen Konoplyanka,51.61290322580645
-233113,Aleñà,Carles Aleñá,54.54545454545455
+233113,Aleñà,Carles Aleñà,54.54545454545455
 184271,Younousse Sankharé,Younousse Sankhare,58.064516129032256
-152211,Ramazan Özcan,Salih Özcan,62.5
-167514,Dušan Basta,Juan Bernat,63.63636363636363
+152211,Ramazan Özcan,Ramazan Özcan,62.5
+167514,Dušan Basta,Dusan Basta,63.63636363636363
 221695,Godfred Donsah,Godfred Donsah,64.0
 212476,Medrán,Álvaro Medrán,66.66666666666666
 188005,Camacho,Camacho,66.66666666666666
@@ -11,12 +11,10 @@ id,futbin_name,ustat_name,score
 143745,Arda Turan,Arda Turan,66.66666666666666
 105846,Artur Boruc,Artur Boruc,66.66666666666666
 172553,Jonas Lössl,Jonas Lössl,66.66666666666666
-183491,Mathias Jørgensen,Matthias Ginter,68.75
 192593,Danijel Subašic,Danijel Subasic,68.9655172413793
 244269,Filip Benković,Filip Benkovic,69.23076923076923
 225199,Vincent Koziello,Vincent Koziello,70.0
 186148,Ron-Robert Zieler,Ron-Robert Zieler,70.58823529411765
-231235,Kelvin Amian,Kelvin Amian,72.0
 170815,Steven Defour,Steven Defour,72.0
 219411,José Izquierdo,José Izquierdo,72.72727272727272
 183483,Konstantinos Mitroglou,Kostas Mitroglou,75.55555555555556
@@ -52,12 +50,12 @@ id,futbin_name,ustat_name,score
 183820,Matthieu Dossevi,Mathieu Dossevi,96.7741935483871
 232869,Gen Shoji,Gen Shoji,100.0
 159175,Alaixys Romao,Jacques-Alaixys Romao,100.0
-221701,Gabriel Boschilia,Gabriel,100.0
+221701,Gabriel Boschilia,Boschilia,100.0
 112365,Renaud Cohade,Renaud Cohade,100.0
 225945,Thiago Maia,Thiago Maia,100.0
-181402,William Vainqueur,William,100.0
+181402,William Vainqueur,William Vainqueur,100.0
 163665,Daniel Congré,Daniel Congré,100.0
-217731,Sandro,Sandro Tonali,100.0
+217731,Sandro,Sandro Ramírez,100.0
 192242,Paul Lasne,Paul Lasne,100.0
 140620,Ragnar Klavan,Ragnar Klavan,100.0
 211408,Karol Linetty,Karol Linetty,100.0
@@ -68,12 +66,12 @@ id,futbin_name,ustat_name,score
 205633,Lucas Castro,Lucas Castro,100.0
 201049,Lorenzo Tonelli,Lorenzo Tonelli,100.0
 205943,Vlad Chiriches,Vlad Chiriches,100.0
-166072,Danilo,Danilo Cataldi,100.0
+166072,Danilo,Danilo D'Ambrosio,100.0
 211354,Marco Benassi,Marco Benassi,100.0
 177983,Cristian Zapata,Cristian Zapata,100.0
 176104,Valter Birsa,Valter Birsa,100.0
-186627,Mario Balotelli,Mario Balotelli,100.0
-181783,Mario Mandžukic,Mario Mandzukic,100.0
+186627,Mario Balotelli,Mario,100.0
+181783,Mario Mandžukic,Mario,100.0
 170890,Blaise Matuidi,Blaise Matuidi,100.0
 202515,Jesé,Jesé,100.0
 231949,Ghoddos,Saman Ghoddos,100.0
@@ -102,7 +100,7 @@ id,futbin_name,ustat_name,score
 137351,Daniel Baier,Daniel Baier,100.0
 223033,Jorge Meré,Jorge,100.0
 220925,Alessandro Schöpf,Alessandro Schöpf,100.0
-204497,Kevin Stöger,Kevin Stöger,100.0
+204497,Kevin Stöger,Kevin,100.0
 193584,Guido Burgstaller,Guido Burgstaller,100.0
 158438,Gelson Tavares Fernandes,Gelson Fernandes,100.0
 189410,Danny Latza,Danny Latza,100.0
@@ -123,7 +121,7 @@ id,futbin_name,ustat_name,score
 185221,Luiz Gustavo,Luiz Gustavo,100.0
 210489,Louis Schaub,Louis Schaub,100.0
 177666,Martin Harnik,Martin Harnik,100.0
-207924,Lucas Lima,Lucas Lima,100.0
+207924,Lucas Lima,Lucas,100.0
 108080,Lichtsteiner,Stephan Lichtsteiner,100.0
 234728,László Bénes,László Bénes,100.0
 193311,Philipp Bargfrede,Philipp Bargfrede,100.0
@@ -137,8 +135,8 @@ id,futbin_name,ustat_name,score
 25420,Claudio Pizarro,Claudio Pizarro,100.0
 227503,Jacob Bruun Larsen,Jacob Bruun Larsen,100.0
 199559,Roberto Inglese,Roberto Inglese,100.0
-140082,Rafael,Rafael Czichos,100.0
-186200,Fabio Borini,Fabio,100.0
+140082,Rafael,Rafael,100.0
+186200,Fabio Borini,Fabio Borini,100.0
 210828,Björn Engels,Björn Engels,100.0
 201155,Ravel Morrison,Ravel Morrison,100.0
 189725,Tom Cleverley,Tom Cleverley,100.0
@@ -152,7 +150,7 @@ id,futbin_name,ustat_name,score
 193011,Steve Cook,Steve Cook,100.0
 172871,Jan Vertonghen,Jan Vertonghen,100.0
 225699,Anuar Mohamed Tuhami,Anuar Mohamed,100.0
-226060,Roger Assalé,Roger,100.0
+226060,Roger Assalé,Roger Assalé,100.0
 236331,Erick Cabaco,Erick Cabaco,100.0
 219712,Sebastián Cristóforo,Sebastián Cristóforo,100.0
 211263,Lisandro Magallán,Lisandro Magallán,100.0
@@ -166,14 +164,14 @@ id,futbin_name,ustat_name,score
 188337,Mubarak Wakaso,Mubarak Wakaso,100.0
 216325,Angus Gunn,Angus Gunn,100.0
 53914,Phil Jagielka,Phil Jagielka,100.0
-135451,Gomes,André Gomes,100.0
+135451,Gomes,Angel Gomes,100.0
 180706,Craig Cathcart,Craig Cathcart,100.0
 234986,Panagiotis Retsos,Panagiotis Retsos,100.0
 194996,Borja Bastón,Borja,100.0
 246069,Lukas Rupp,Lukas Rupp,100.0
 182836,Andy Carroll,Andy Carroll,100.0
 215871,Alireza Jahanbakhsh,Alireza Jahanbakhsh,100.0
-232805,Bernardo,Bernardo Silva,100.0
+232805,Bernardo,Bernardo,100.0
 205897,Nathaniel Chalobah,Nathaniel Chalobah,100.0
 191648,Maya Yoshida,Maya Yoshida,100.0
 189446,Junior Stanislas,Junior Stanislas,100.0
@@ -187,7 +185,7 @@ id,futbin_name,ustat_name,score
 198504,Josip Drmic,Josip Drmic,100.0
 184749,Dan Gosling,Dan Gosling,100.0
 163631,Leighton Baines,Leighton Baines,100.0
-142784,Pablo Zabaleta,Pablo,100.0
+142784,Pablo Zabaleta,Pablo Zabaleta,100.0
 135883,Simon Francis,Simon Francis,100.0
 225018,Florin Andone,Florin Andone,100.0
 219536,Ignacio Pussetto,Ignacio Pussetto,100.0
@@ -196,7 +194,7 @@ id,futbin_name,ustat_name,score
 190885,Adam Smith,Adam Smith,100.0
 136113,Wes Morgan,Wes Morgan,100.0
 169426,Barragán,Antonio Barragán,100.0
-163806,Sergio,Sergio Reguilón,100.0
+163806,Sergio,Sergio Rico,100.0
 142959,Mariano Barbosa,Mariano,100.0
 178086,Adán,Antonio Adán,100.0
 106231,Aduriz,Aduriz,100.0
@@ -213,7 +211,7 @@ id,futbin_name,ustat_name,score
 177600,Beñat,Beñat,100.0
 220475,Alberto Grassi,Alberto Grassi,100.0
 203884,Koffi Djidji,Koffi Djidji,100.0
-201931,Gabriel,Gabriel Strefezza,100.0
+201931,Gabriel,Gabriel Fernández,100.0
 192587,Artur Ionita,Artur Ionita,100.0
 182168,Andrea Ranocchia,Andrea Ranocchia,100.0
 144622,Raffael,Raffael,100.0
@@ -224,9 +222,9 @@ id,futbin_name,ustat_name,score
 201335,Federico Santander,Federico Santander,100.0
 192575,Emmanuel Badu,Emmanuel Badu,100.0
 192073,Bertolacci,Andrea Bertolacci,100.0
-213414,William Troost-Ekong,William,100.0
+213414,William Troost-Ekong,William Troost-Ekong,100.0
 229148,Dalbert,Dalbert,100.0
-164029,Charles,Charles,100.0
+164029,Charles,Jean-Charles Castelletto,100.0
 187491,Fedor Smolov,Fedor Smolov,100.0
 199602,John Guidetti,John Guidetti,100.0
 212772,Óscar Duarte,Óscar Duarte,100.0
@@ -239,7 +237,7 @@ id,futbin_name,ustat_name,score
 182896,Roberto Rosales,Roberto Rosales,100.0
 172290,David Zurutuza,David Zurutuza,100.0
 155984,Markel Bergara,Markel Bergara,100.0
-200228,Bruno,Bruno Alves,100.0
+200228,Bruno,Bruno,100.0
 178424,Antunes,Vitorino Antunes,100.0
 230578,Mouctar Diakhaby,Mouctar Diakhaby,100.0
 212196,Pione Sisto,Pione Sisto,100.0
