@@ -1,6 +1,9 @@
 # Tests
 test_files
 
+# Hidden
+old_files
+
 # Mac
 *.DS_Store
 
