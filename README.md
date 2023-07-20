@@ -22,8 +22,9 @@ In preparation for the the release of EAFC 24, I wanted to attempt to predict th
 * sql files: file to create database with correct constraints
 
 ## Database
-Based on the following diagram, the goal is to expand the project to also contain data from teams which may improve the current predictions along with allowing for future projects/analysis
-[![Watch the video][(https://i.stack.imgur.com/Vp2cE.png](https://github.com/BilalMukhtar/FIFA-Rating-Predictor/blob/main/imgs/soccer_db_png.png))]([https://youtu.be/vt5fpE0bzSY](https://drawsql.app/teams/bilals-team-1/diagrams/soccerdb/embed))
+Based on the following diagram, the goal is to expand the project to also contain data from teams which may improve the current predictions along with allowing for future projects/analysis (Click on the image for an interactive view)
+<br></br>
+[![alttext](https://github.com/BilalMukhtar/FIFA-Rating-Predictor/blob/main/imgs/soccer_db_png.png)](https://drawsql.app/teams/bilals-team-1/diagrams/soccerdb/embed)
 
 
 ## Data Sources
