@@ -1,17 +1,31 @@
-# understatDatabase
+# FIFA Rating Predictor/DB
 
-All data was sourced from understat.com
-
-## Goal
-* Create a database based that contains stats from the top 5 European Soccer Leagues
-* Utilize database for analysis, particularily using the xG stat
+## Overview
+In preparation for the the release of EAFC 24, I wanted to attempt to predict the ratings of some of the top players in the world. By using historical FIFA data alongside real-life stats, I attempted to accurately predict ratings of players.
 
 ## Process
-* Data was scraped from understat.com using Python and Selenium
-* The data was then processed into Pandas dataframes
-* Database was created based on the values of most importance
-* Database was populated using the scraped data
+* Data was scraped from futbin.com and understat.com using BeautifulSoup
+* The data was then combined by matching clubs and player names manually and via fuzzy-matching
+* Cleaned data was then populated into a custom made database to allow for complex queries to match-up different FIFA years with real life seasons
+* DB was queried using RPostgres and then analysis was done using R
 
-## Future Objectives
-* Run the database on AWS RDS and create automatic, weekly updates
-* Use the data sourced for analysis
+## Files
+### Notebooks
+* futbin_scrape/understat_scrape: used to scrape data
+* data_cleaning: used to clean data and match data from both sources
+* futbin_understat_combo: used to combine cleaned data into one csv file
+* to_db: used to insert all cleaned data into the database
+
+### Folders
+* csv files: raw scraped data and the cleaned/combined data
+* data repair csvs: csvs used to match player names and clubs
+* sql files: file to create database with correct constraints
+
+## Database
+Based on the following diagram, the goal is to expand the project to also contain data from teams which may improve the current predictions along with allowing for future projects/analysis
+
+
+
+## Data Sources
+* futbin.com (FIFA Data)
+* understat.com (Player Data)
