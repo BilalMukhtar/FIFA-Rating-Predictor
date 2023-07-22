@@ -31,42 +31,58 @@ dbClearResult(res)
 tab
 ```
 
-
 ```{r}
 library(tidyverse)
 library(glmnet)
-data<- tab #%>%
-  #select(player_name_futbin,rating,comp_id,apps,minutes,goals,xG,assists,xA,shots,key_passes,yellow_cards,red_cards,npg,npxG,xGChain,xGBuildup)
+tab$currrating <- as.factor(tab$currrating)
+data <- tab
+#data <- filter(data, rating > 80)
 
 set.seed(100)
 data[is.na(data)] <- 0
-train <- data %>% sample_frac(size = 0.8, fac=rating)
+train <- data %>% sample_frac(size = 0.7, fac=currrating)
 test <- data %>% setdiff(train)
-```
-
-```{r}
-train
 ```
 
 ```{r}
 library(rpart)
 library(rpart.plot)
-form<- as.formula(currrating~.)
+#form <- as.formula(currrating~.)
+form <- as.formula(paste("currrating ~ ",paste(filtVars, collapse="+"),sep = ""))
 
-mod_tree <- rpart(form,data=train)
+#mod_tree <- rpart(form,data=train)
+```
+
+```{r}
+library(e1071)
+classifier_cl <- naiveBayes(form, data = train)
+
+y_pred <- predict(classifier_cl, newdata = test)
+ 
+# Confusion Matrix
+cm <- table(test$currrating, y_pred)
+cm
+ 
+# Model Evaluation
+confusionMatrix(cm)
 ```
 
 ```{r}
 library(randomForest)
-mod_rf<- randomForest(form,train,ntree=10000,importance=TRUE)
+mod_rf<- randomForest(form,train,ntree=1000,importance=TRUE)
 mod_rf
 ```
 
 ```{r}
-plot(mod_rf)
+library(caret)
+p1 <- predict(mod_rf, train)
+confusionMatrix(p1, train$currrating)
 ```
 
-
+```{r}
+p2 <- predict(mod_rf, test)
+confusionMatrix(p2, test$currrating)
+```
 
 ```{r}
 # Get variable importance from the model fit
@@ -84,4 +100,12 @@ ggplot(ImpData, aes(x=Var.Names, y=`%IncMSE`)) +
     panel.border = element_blank(),
     axis.ticks.y = element_blank()
   )
+```
+
+
+```{r}
+filter(ImpData, IncNodePurity > 50)
+filtVars <- filter(ImpData, IncNodePurity > 50)$Var.Names
+filtVars <- filtVars[!filtVars == 'card_id']
+filtVars
 ```

@@ -25,7 +25,7 @@ CREATE TABLE CLUB
     club_name_futbin    varchar(100),
     club_name_ustat     varchar(100),
     nation              varchar(50),
-    CONSTRAINT PK_TEAM PRIMARY KEY (club_id)
+    CONSTRAINT PK_CLUB PRIMARY KEY (club_id)
 );
 
 CREATE TABLE COMPETITION
@@ -75,8 +75,8 @@ CREATE TABLE CLUB_STATS
     xG                  INTEGER,
     xA                  INTEGER,
     xGA                 INTEGER,
-    CONSTRAINT PK_TEAM_STATS PRIMARY KEY (club_id, season, comp_id),
-    CONSTRAINT FK1_PLAYER_STATS FOREIGN KEY (club_id) REFERENCES CLUB(club_id)
+    CONSTRAINT PK_CLUB_STATS PRIMARY KEY (club_id, season, comp_id),
+    CONSTRAINT FK1_CLUB_STATS FOREIGN KEY (club_id) REFERENCES CLUB(club_id)
 );
 
 CREATE TABLE COMP_STATS
