@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "FIFA Rating Predictions"
 output: html_notebook
 ---
 
@@ -34,78 +34,104 @@ tab
 ```{r}
 library(tidyverse)
 library(glmnet)
-tab$currrating <- as.factor(tab$currrating)
-data <- tab
-#data <- filter(data, rating > 80)
+tab[is.na(tab)] <- 0
+data_reg <- tab
+data_class <- tab
+data_class$currrating <- as.factor(data_class$currrating)
+
 
 set.seed(100)
-data[is.na(data)] <- 0
-train <- data %>% sample_frac(size = 0.7, fac=currrating)
-test <- data %>% setdiff(train)
+train_reg <- data_reg %>% sample_frac(size = 0.7, fac=currrating)
+test_reg <- data_reg %>% setdiff(train_reg)
+train_class <- data_class %>% sample_frac(size = 0.7, fac=currrating)
+test_class <- data_class %>% setdiff(train_class)
 ```
 
 ```{r}
 library(rpart)
 library(rpart.plot)
-#form <- as.formula(currrating~.)
-form <- as.formula(paste("currrating ~ ",paste(filtVars, collapse="+"),sep = ""))
-
-#mod_tree <- rpart(form,data=train)
+#form <- as.formula(currrating~apps+minutes+goals+xG+assists+xA+shots+key_passes+npg+npxG+xGChain+xGBuildup+rating+pac+dri+pas+def+phy)
+form <- as.formula(currrating~.)
 ```
 
 ```{r}
-library(e1071)
-classifier_cl <- naiveBayes(form, data = train)
+draw_boxplot <- function(){ 
+  data %>%  
+    pivot_longer(30:65, names_to="attributes") %>%  
+    ggplot(aes(attributes, value, fill=attributes)) + 
+    geom_boxplot() 
+}
+```
 
-y_pred <- predict(classifier_cl, newdata = test)
- 
-# Confusion Matrix
-cm <- table(test$currrating, y_pred)
-cm
- 
-# Model Evaluation
-confusionMatrix(cm)
+```{r}
+data <- data %>%  
+  mutate(across(30:65, scale))
+
+draw_boxplot()
 ```
 
 ```{r}
 library(randomForest)
-mod_rf<- randomForest(form,train,ntree=1000,importance=TRUE)
-mod_rf
+reg_rf <- randomForest(form,train_reg,ntree=1000,importance=TRUE)
+class_rf <- randomForest(form,train_class,ntree=1000,importance=TRUE)
 ```
 
 ```{r}
 library(caret)
-p1 <- predict(mod_rf, train)
-confusionMatrix(p1, train$currrating)
+p1_reg <- predict(reg_rf, train_reg)
+print(mean((p1_reg-train_reg$currrating)^2))
 ```
 
 ```{r}
-p2 <- predict(mod_rf, test)
-confusionMatrix(p2, test$currrating)
+p1_class <- predict(class_rf, train_class)
+confusionMatrix(p1_class, train_class$currrating)
 ```
 
 ```{r}
-# Get variable importance from the model fit
-ImpData <- as.data.frame(importance(mod_rf))
-ImpData$Var.Names <- row.names(ImpData)
-
-ggplot(ImpData, aes(x=Var.Names, y=`%IncMSE`)) +
-  geom_segment( aes(x=Var.Names, xend=Var.Names, y=0, yend=`%IncMSE`), color="skyblue") +
-  geom_point(aes(size = IncNodePurity), color="blue", alpha=0.6) +
-  theme_light() +
-  coord_flip() +
-  theme(
-    legend.position="bottom",
-    panel.grid.major.y = element_blank(),
-    panel.border = element_blank(),
-    axis.ticks.y = element_blank()
-  )
+p2_reg <- predict(reg_rf, test_reg)
+print(mean((p2_reg-test_reg$currrating)^2))
 ```
 
+```{r}
+p2_class <- predict(class_rf, test_class)
+confusionMatrix(p2_class, test_class$currrating)
+```
 
 ```{r}
-filter(ImpData, IncNodePurity > 50)
-filtVars <- filter(ImpData, IncNodePurity > 50)$Var.Names
-filtVars <- filtVars[!filtVars == 'card_id']
-filtVars
+res2 <- dbSendQuery(con, ("SELECT p.*, ps.*, prevr.*
+FROM PLAYER p
+JOIN PLAYER_STATS ps ON p.player_id = ps.player_id
+JOIN PLAYER_RATINGS prevr ON p.player_id = prevr.player_id
+WHERE ps.season = prevr.season and ps.season = 23;"))
+
+
+
+tab2 = dbFetch(res2)
+dbClearResult(res2)
+```
+
+```{r}
+tab2
+```
+
+```{r}
+data2 <- tab2
+data2 <- data2 %>% rename('player_id..27' = 'player_id..26')
+data2 <- data2 %>% rename('season..28' = 'season..27')
+data2[is.na(data2)] <- 0
+```
+
+```{r}
+library(modelr)
+final <- data2 %>% spread_predictions(reg_rf, class_rf) %>% 
+  select(player_name_futbin, rating, reg_rf, class_rf) %>%
+  arrange(-rating) %>%
+  rename('name' = 'player_name_futbin', 
+         'FIFA 23' = 'rating', 'Regression' = 'reg_rf', 
+         'Classification' = 'class_rf')
+final
+```
+
+```{r}
+write.csv(final, "predictions.csv", row.names=FALSE)
 ```
