@@ -1,7 +1,13 @@
 ---
 title: "FIFA Rating Predictions"
-output: html_notebook
+output:
+  pdf_document: default
+  html_notebook: default
 ---
+
+# Fetching from DB
+
+Start by connection to the database
 
 ```{r}
 library(DBI)
@@ -12,6 +18,8 @@ con <- dbConnect(RPostgres::Postgres(),
                  user = 'postgres',
                  password = 'password')
 ```
+
+Matches players stats to ratings from the previous year and their current year final rating
 
 ```{r}
 res <- dbSendQuery(con, ("SELECT p.*, ps.*, curr.rating as currrating, prevr.*
@@ -31,6 +39,10 @@ dbClearResult(res)
 tab
 ```
 
+# Modeling
+
+Data is separated into two sets for regression and classification and split into train and test sets
+
 ```{r}
 library(tidyverse)
 library(glmnet)
@@ -47,6 +59,8 @@ train_class <- data_class %>% sample_frac(size = 0.7, fac=currrating)
 test_class <- data_class %>% setdiff(train_class)
 ```
 
+While different formulas were tested, I settled on using all variables for the final prediction
+
 ```{r}
 library(rpart)
 library(rpart.plot)
@@ -54,27 +68,15 @@ library(rpart.plot)
 form <- as.formula(currrating~.)
 ```
 
-```{r}
-draw_boxplot <- function(){ 
-  data %>%  
-    pivot_longer(30:65, names_to="attributes") %>%  
-    ggplot(aes(attributes, value, fill=attributes)) + 
-    geom_boxplot() 
-}
-```
-
-```{r}
-data <- data %>%  
-  mutate(across(30:65, scale))
-
-draw_boxplot()
-```
+Random forest is used for both regression and classification
 
 ```{r}
 library(randomForest)
 reg_rf <- randomForest(form,train_reg,ntree=1000,importance=TRUE)
 class_rf <- randomForest(form,train_class,ntree=1000,importance=TRUE)
 ```
+
+# Results
 
 ```{r}
 library(caret)
@@ -96,6 +98,8 @@ print(mean((p2_reg-test_reg$currrating)^2))
 p2_class <- predict(class_rf, test_class)
 confusionMatrix(p2_class, test_class$currrating)
 ```
+
+# Getting Predictions
 
 ```{r}
 res2 <- dbSendQuery(con, ("SELECT p.*, ps.*, prevr.*
