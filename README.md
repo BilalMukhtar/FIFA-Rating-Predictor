@@ -16,7 +16,7 @@ In preparation for the the release of EAFC 24, I wanted to attempt to predict th
 * [`futbin_understat_combo.ipynb`](https://github.com/BilalMukhtar/FIFA-Rating-Predictor/blob/main/futbin_understat_combo.ipynb) ([nbviewer version](https://nbviewer.org/github/BilalMukhtar/FIFA-Rating-Predictor/blob/main/futbin_understat_combo.ipynb)): used to clean data and match data from both sources
 * [`data_cleaning.ipynb`](https://github.com/BilalMukhtar/FIFA-Rating-Predictor/blob/main/data_cleaning.ipynb) ([nbviewer version](https://nbviewer.org/github/BilalMukhtar/FIFA-Rating-Predictor/blob/main/data_cleaning.ipynb)): used to combine cleaned data into one csv file
 * [`to_db.ipynb`](https://github.com/BilalMukhtar/FIFA-Rating-Predictor/blob/main/to_db.ipynb) ([nbviewer version](https://nbviewer.org/github/BilalMukhtar/FIFA-Rating-Predictor/blob/main/to_db.ipynb)): used to insert all cleaned data into the database
-* [`analysis.nb.html`](https://github.com/BilalMukhtar/FIFA-Rating-Predictor/blob/main/analysis.nb.html) ([source](https://github.com/BilalMukhtar/FIFA-Rating-Predictor/blob/main/analysis.Rmd)): used to insert all cleaned data into the database
+* [`analysis.nb.html`](https://htmlpreview.github.io/?https://github.com/BilalMukhtar/FIFA-Rating-Predictor/blob/main/analysis.nb.html) ([source](https://github.com/BilalMukhtar/FIFA-Rating-Predictor/blob/main/analysis.Rmd)): modeling and predictions for ratings
 
 ### Folders
 <details>
