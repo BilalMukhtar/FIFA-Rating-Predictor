@@ -21,6 +21,9 @@ In preparation for the the release of EAFC 24, I wanted to attempt to predict th
 * data repair csvs: csvs used to match player names and clubs
 * sql files: file to create database with correct constraints
 
+### Predictions
+* predictions.csv: Contains the predictions for EAFC 24
+
 ## Database
 Based on the following diagram, the goal is to expand the project to also contain data from teams which may improve the current predictions along with allowing for future projects/analysis (Click on the image for an interactive view)
 <br></br>
